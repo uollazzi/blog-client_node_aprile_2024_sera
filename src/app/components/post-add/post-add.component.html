@@ -1,0 +1,43 @@
+<form (ngSubmit)="salva()">
+  <div class="mb-3">
+    <label for="title" class="form-label">Titolo</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      [(ngModel)]="model.title"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="author" class="form-label">Autore</label>
+    <input
+      type="text"
+      class="form-control"
+      id="author"
+      name="author"
+      [(ngModel)]="model.author"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="body" class="form-label">Testo</label>
+    <textarea
+      class="form-control"
+      id="body"
+      name="body"
+      rows="3"
+      [(ngModel)]="model.body"
+    ></textarea>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      id="hidden"
+      name="hidden"
+      [(ngModel)]="model.hidden"
+    />
+    <label class="form-check-label" for="hidden">Privato</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Inserisci</button>
+</form>
